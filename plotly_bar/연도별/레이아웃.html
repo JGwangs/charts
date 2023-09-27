@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+
+    </head>
+        <script type="text/javascript" src=http://code.jquery.com/jquery.js>
+        </script>
+        <script type="text/javascript">
+            function updatedata() {
+                var selected_data = document.getElementById("year").value;
+                document.getElementById("imported").setAttribute('data', selected_data);
+            }
+        </script>
+            
+    <style>
+        body {
+            margin : auto;
+            width : 80%;
+            max-width: 800px;
+        }
+        .wrapper {
+            margin : 0;
+            width :100%;
+            display: flex;
+            align-items:baseline;    
+        }
+        .title {
+            text-align: left;
+            padding: 10px;
+            float:left;
+            font-family: '맑은 고딕';
+            font-weight: bold;
+            border-left: 3px solid #C00000;
+        }
+        .dropdownmenu {
+            margin-left: auto;
+        }
+        .chart {
+            padding: 10px 0; 
+            font-family: '맑은 고딕';
+            height: 500px;
+            display: flex;
+        }
+        select {
+            background-color: #ED7D31;          
+            border:5px;
+            width:80px;
+            color:white;
+            text-shadow: 0 0 0 white;
+        }
+        object {
+            width : 100%;
+            height : 100%;
+        }
+    </style>
+    <body>
+        <div class = 'wrapper'>
+            <div class = 'title'>연도별 주민등록인구 및 세대현황
+            </div>
+            <div class = 'dropdownmenu' style='display: inline'>
+                <select id = 'year' onchange="updatedata()">
+                    <option value = 202308_주민등록인구및세대현황_2022년.html>2022년</option>
+                    <option value = 202308_주민등록인구및세대현황_2021년.html>2021년</option>
+                    <option value = 202308_주민등록인구및세대현황_2020년.html>2020년</option>
+                    <option value = 202308_주민등록인구및세대현황_2019년.html>2019년</option>
+                    <option value = 202308_주민등록인구및세대현황_2018년.html>2018년</option>
+                    <option value = 202308_주민등록인구및세대현황_2017년.html>2017년</option>
+                    <option value = 202308_주민등록인구및세대현황_2016년.html>2016년</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class = 'chart' id='chart'>
+            <object id='imported' type="text/html" data="202308_주민등록인구및세대현황_2022년.html"></object>
+        </div>
+    </body>
+    
+</html>
